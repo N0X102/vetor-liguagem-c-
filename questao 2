@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+
+    float notas[3];
+    float media,soma;
+    int i;
+
+
+    // Leitura das notas
+    for (i = 0; i < 3; i++)
+    {
+        printf("digite uma %d nota: ", i + 1);
+        scanf("%f", &notas[i]);
+
+        soma += notas[i];
+    }
+
+
+    media = soma/3;
+
+    // Exibição dos dados
+    printf("media: %f\n", media);
+    
+    if (media >= 7){
+        
+        printf("Aprovado\n");
+        
+        }
+    
+    else if (media >= 5){
+        
+        printf("Recuperacao\n");
+        
+        }
+
+    else{
+        
+        printf("Reprovado\n");
+        
+        }
+
+
+    return 0;
+}

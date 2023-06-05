@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define NOTA_MAXIMA 10
+
+int main() {
+    float notas[3];
+    float media, soma;
+    int i;
+    
+    // Leitura das notas
+    for (i = 0; i < 3; i++) {
+        printf("Qual a sua %d prova?\n", i + 1);
+        scanf("%f", &notas[i]);
+        
+        // Verificar se a nota é maior que a nota máxima
+        if (notas[i] > NOTA_MAXIMA) {
+            printf("A nota inserida é maior que a nota máxima permitida. Por favor, insira novamente.\n");
+            i--; // Repetir a iteração para a mesma prova
+            continue;
+        }
